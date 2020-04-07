@@ -1,0 +1,32 @@
+---
+- name: Create jira volume root directory
+  become: "yes"
+  file:
+    path: /srv/nfs/prod/jira
+    state: directory
+    mode: 0777
+  any_errors_fatal: true
+
+- name: Create jira volume root directory
+  become: "true"
+  file:
+    path: /srv/nfs/prod/jira
+    state: directory
+    mode: 0777
+  any_errors_fatal: true
+
+- name: Create jira volume data directory
+  become: "true"
+  file:
+    path: /srv/nfs/prod/jira/data
+    state: directory
+    mode: 0777
+  any_errors_fatal: true
+
+- name: Create jira volume logs directory
+  become: "true"
+  file:
+    path: /srv/nfs/prod/jira/logs
+    state: directory
+    mode: 0777
+  any_errors_fatal: true
